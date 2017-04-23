@@ -19,6 +19,9 @@ class ContactDetailController: UITableViewController {
     @IBOutlet weak var state: UILabel!
     @IBOutlet weak var zipCode: UILabel!
     
+    //Header items
+    @IBOutlet weak var personImage: UIImageView!
+    @IBOutlet weak var fullNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +49,11 @@ class ContactDetailController: UITableViewController {
         city.text = contact.city
         state.text = contact.state
         zipCode.text = contact.zip
+        
+        personImage.image = contact.image
+        
+        fullNameLabel.text = "\(contact.firstName) \(contact.lastName)"
+        
     }
 
  }
